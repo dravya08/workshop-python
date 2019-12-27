@@ -1,0 +1,12 @@
+#wapp to find the area of circle and rectangle (function overload)
+
+def area(p1=None, p2=None):
+	if p2 is None:
+		res = 3.14 * p1** 2
+		print("area of circle",res)
+	else:
+		res = p1 * p2
+		print("area of rectanle", res)
+
+area(4.5,6.7)
+area(343.3)
