@@ -1,5 +1,6 @@
-def f1(a):
-	print(a*10)
-def f1(b):
-	print(b+20)
-f1(30)
+rooms = {1:'Foyer', 2:'Conference Room'}
+room = input("enter the room number")
+if not room in rooms:
+	print("yes")
+else:
+	print("no")
