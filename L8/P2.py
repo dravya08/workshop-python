@@ -1,20 +1,25 @@
-'''
-waoopp for class employee :
-	SV: company_name = 'tcs'
-	IV: eid,ename,esalary
-	PI: for eid,ename,esalary
-	IM: show() to display employee info with cimoany_name
-	IM: calc_bonus to display bonus amount which is 20% of salary
-	do create a object forr testing purpose
-'''
+''' waoop for class employee:
+	SV: company_name = 'TCS'
+	IV: eid,ename, esalary
+	PI: for eid, ename , esalary
+	IM: show() to display employee info with company
+	IM: calc_bonus() to display bonus amount which is 20% of salary
+	do create a object for testing purpose'''
 
 class employee:
 
 	company_name = "TCS"
+
+	def __init__ (self,id,name,salary):
+		self.id = id
+		self.name = name 
+		self.salary = salary
+
 	def __init__ (self,i,n,s):
 		self.id = i
 		self.name = n
 		self.salary = s
+
 	
 	def show(self):
 		print("Id: ",self.id)
@@ -41,15 +46,3 @@ comm = float(input("enter comm "))
 sp = salesperson(id,name,salary,comm)
 sp.show()
 sp.calc_bonus()
-
-
-
-
-
-
-
-
-
-
-
-

@@ -1,47 +1,24 @@
-import os.path
-import pickle
-
-class student:
-		def __init__(self,rno,name):
-			self.rno=rno
-			self.name=name
-		def __str__(self):
-			msg="rno=" + str(self.rno) + "name=" + str(self.name)
-			return msg
-
-stu =[]	
-file_name = "student_ka_data.ser"
-if os.path.exists(file_name):	
-	f = None
-	try:
-		f = open(file_name,'rb')
-		stu = pickle.load(f)
-	except Exception as e:
-		print("issue",e)
-	finally:
-		if f is not None:
-			f.close()
-while True:
-	op = int(input("1 add, 2 view,3 delete and 4 exit "))
-	if op == 1:
-		rno = int(input("enter rno "))
-		name = input("enter name ")
-		s = student(rno,name)
-		stu.append(s)
-		print("object saved int list")
-	elif op == 2:
-		for s in stu:
-			print(s)
-	elif op == 3:
-		ele = int(input("enter the rno to delete: "))
-		for s in stu:
-			if s.rno == ele:		
-				stu.remove(s)
-				print("record deleted ")
-	elif op == 4:
-		f = open(file_name,'wb')
-		pickle.dump(stu,f)
-		f.close()
-		break
-	else:
-		print("invalid option")
+import threading
+import time
+class Assignments(threading.Thread):
+	def run(self):
+		print("writing started ")
+		for  i in range(1,11):
+			print("writing ", i ,"assignment")
+			time.sleep(3)
+		print("writing ended")
+class Music(threading.Thread):
+	def run(self):
+		print("Music started ")
+		for i in range(1, 21):
+			print("song " ,i , "played")
+			time.sleep(1)
+		print("Music stopped")
+print("aate hi kam shuru kar diye")
+a = Assignments()
+m = Music()
+a.start()
+m.start()
+a.join()
+m.join()
+print("har bar garam kar k chod dayta ho")

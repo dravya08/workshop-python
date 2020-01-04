@@ -32,7 +32,7 @@ class salesperson(employee):
 		super().show()
 		print("comm= ",self.comm)
 	def calc_bonus(self):
-		amount = self.esalary * 0.50
+		amount = self.salary * 0.50
 		print("bonus amount", amount)
 
 id = int(input("Enter emp id ")) 
@@ -42,6 +42,4 @@ comm = float(input("enter comm "))
 sp = salesperson(id,name,salary,comm)
 sp.show()
 sp.calc_bonus()
-
-		
 	

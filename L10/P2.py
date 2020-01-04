@@ -1,3 +1,4 @@
+
 '''
 #wapp to delete a file whose name is supplied by thte user
 
@@ -25,3 +26,4 @@ if os.path.isfile(file_name):
 	print(file_name,"Deleted")
 else:
 	print(file_name,"file does not exists")
+
