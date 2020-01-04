@@ -1,3 +1,3 @@
 import mymath
-mymath.square(3)
+mymath.square(6)
 mymath.cube(4)
