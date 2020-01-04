@@ -1,3 +1,4 @@
+
 # wapp to write data into an existing file
 
 import os.path
@@ -16,4 +17,6 @@ if os.path.exists(file_name):
 		if f is not None:
 			f.close()
 else:
+	print(file_name,"file does not exists ")
+  
 	print(file_name, "does not exits")
